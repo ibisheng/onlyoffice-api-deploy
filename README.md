@@ -136,6 +136,12 @@
 
    管理员默认用户名为： admin ;密码为 bisheng
 
+   API集成版修改控制台密码的方式为：执行脚本 bash initAdminPass.sh，该脚本需要一个参数，即密码：
+
+   ```shell
+   bash initAdminPass.sh mypassword //将 mypassword修改为你要的密码
+   ```
+
 3. 为什么激活了之后还是重定向到了控制台？
 
    如果你没有激活，需要激活毕升文档，激活链接：<https://ibisheng.cn/apps/blog/posts/license.html> ；
