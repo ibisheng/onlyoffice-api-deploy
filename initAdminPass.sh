@@ -23,6 +23,6 @@ docker run --name tools --privileged  \
     -v $3:/workspace \
     -e RUN_ENV=docker \
     -e type=32  \
-    -e pass=$1
+    -e pass=$1  \
     --net=bisheng  \
     registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools:$tag
