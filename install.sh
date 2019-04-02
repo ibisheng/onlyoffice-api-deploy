@@ -20,21 +20,19 @@ sh pullImage.sh $tag
 
 echo "$1 free" > .config
 
-mkdir $1/{service,workspace,resource,nginx}
-
-cp -r service/* $1/service
-cp -r workspace/* $1/workspace
-cp -r resource/* $1/resource
-cp -r nginx/* $1/nginx
+mkdir $1/service
+mkdir $1/workspace
+mkdir $1/resource
+mkdir $1/nginx
 
 
 cd $1/service
 
-mkdir -p mongod/{db,log}
+mkdir -p mongod/db mongod/log
 touch  mongod/log/mongod.log
-mkdir -p rabbitmq/{data}
-mkdir -p minio/{config,data}
-mkdir -p nginx/{temp,keys}
+mkdir -p rabbitmq/data
+mkdir -p minio/config minio/data
+mkdir -p nginx/temp nginx/keys
 touch  nginx/temp/error.log
 touch  nginx/temp/access.log
 #mkdir  nginx/config/conf.d
@@ -56,9 +54,10 @@ cd -
 sleep 60
 
 
-sh init.sh 7 free $1
+bash init.sh 7 free $1
 
 
+bash initAdminPass.sh bisheng
 
 cd $1/workspace
 mkdir temp
@@ -77,5 +76,7 @@ cd -
 
 cd $1/nginx
 docker-compose up -d
+
+
 
 echo "在你的浏览器中打开 http://IP 即可访问毕升文档，请参看安装文档激活毕升文档"

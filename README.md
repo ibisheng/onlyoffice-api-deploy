@@ -2,16 +2,15 @@
 
 # ![logo](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/favicon.ico)毕升文档云平台安装步骤
 
-
 [毕升文档](https://ibisheng.cn)| onlyoffice中文 |onlyoffice部署
 
-毕升文档云平台包括drive和在线文件服务功能。其中drive实现文件的在线管理，组织结构权限，分享，团队协作等，文件的全文检索等功能；在线文件服务能够处理word,ppt,excel格式文件的**带水印预览**以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升文档产品手册**](https://ibisheng.cn)。下面毕升文档的详细部署说明，如果你喜欢我们欢迎加入毕升文档交流群。
+毕升office api 集成版本能够处理word,ppt,excel格式文件的印预览以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升文档产品手册**](https://ibisheng.cn)。下面毕升文档的详细部署说明，如果你喜欢我们欢迎加入毕升文档交流群。
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9139c206ed47bb0fdf7e1f5468c447f0e9193354204659b1591477c0f70472da"><img border="0" src="https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/%E6%AF%95%E5%8D%87%E6%96%87%E6%A1%A3%E4%BA%A4%E6%B5%81%E7%BE%A4%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="毕升文档交流群" title="毕升文档交流群"></a>
 
 ## 硬件要求
 
-安装过程时在**centos7**系统下进行的，系统为4核8G虚拟云主机服务器。建议使用新安装的系统来安装毕升文档云平台。需要注意的是所有的安装都是root用户执行的。如果您的安装环境不能使用root用户，理论上是不会有问题的，如果碰到权限相关问题请自行搜索资料解决。
+安装过程在**centos7**以及**ubuntu 18.04LTS**系统下，硬件配置2核4G以及4核4G服务器均进行过测试。建议使用新安装的系统来安装毕升文档云平台。需要注意的是所有的安装都是root用户执行的。如果您的安装环境不能使用root用户，理论上是不会有问题的，如果碰到权限相关问题请自行搜索资料解决。
 
 ## 系统要求
 
@@ -22,26 +21,24 @@
 1. 从[github](https://github.com/ibisheng/deploy.git)上clone相关的部署脚本到服务器上
 
    ```shell
-   git clone https://github.com/ibisheng/onlyoffice-deploy.git
-   cd deploy
+   git clone https://github.com/ibisheng/onlyoffice-api-deploy.git
+   cd onlyoffice-api-deploy
    ```
 
    或者你也可以从国内代码托管网站[码云](https://gitee.com/ibisheng) 上clone毕升文档部署脚本到服务器上
 
    ```
-   git clone https://gitee.com/ibisheng/deploy.git
-   cd deploy
+   git clone https://gitee.com/ibisheng/onlyoffice-api-deploy.git
+   cd onlyoffice-api-deploy
    ```
 
 2. 安装docker以及docker-compose
 
-   毕升文档云平台所有的服务均是基于docker-compose安装的，在进行下一步安装之前，请确保你的服务器上已经安装了docker已经docker-compose。你可以使用我们准备的脚本安装,也可以自行参考资料进行安装。r如果你是使用脚本安装可以直接执行 preinstall.sh脚本
+   这一步是准备毕升文档运行的系统条件，并不是安装毕升文档。**
 
-   ```shell
-   sh preinstall.sh
-   ```
+   毕升文档云平台所有的服务均是基于docker-compose安装的，在进行下一步安装之前，**请确保你的服务器上已经安装了docker和docker-compose。**你可以使用我们准备的脚本安装,也可以自行参考资料进行安装。
 
-   如果自行安装可以参考docker安装资料：**[docker 安装](https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-ce)**，而docker-compose安装则可以执行如下命令进行：
+   自行安装Docker 参考链接 ：<https://docs.docker.com/install/>；而docker-compose安装则可以执行如下命令：
 
    ```shell
    curl -L https://get.daocloud.io/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` \
@@ -51,7 +48,19 @@
    systemctl enable docker
    ```
 
-   在安装完成之后，可以通过命令行参看docker以及dockder-compose的版本
+   你也可以选择使用我们提供的脚本安装docker：**如果是你的系统是centos**
+
+   ```shell
+   bash preinstall.sh
+   ```
+
+   **如果你的系统是ubuntu，**则可以执行：
+
+   ```shell
+   bash preinstall-ubuntu.sh
+   ```
+
+   
 
    ![image-20190225144902164](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/docker-version.png)
 
@@ -72,7 +81,7 @@
    在完成以上步骤之后，可以通过install.sh脚本来安装毕升文档
 
    ```shell
-   sh install.sh /bisheng_data # 请确保/bisheng_data目录没有其他数据
+   bash install.sh /bisheng_data # 请确保/bisheng_data目录没有其他数据
    ```
 
    注意：** 安装目录的结尾**不要 斜杠 “/”**，否则安装目录最好拼接会出错。**即上面脚本 "/bisheng_data"不要写成“/bisheng_data/”**
@@ -89,15 +98,18 @@
    docker ps -a
    ```
 
-   ![image-20190312214341594](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/image-20190312214341594.png)
+   ![image-20190402175256521](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/image-20190402175256521.png)
 
    **其中tools这个容器正常状态是Exit的。**
 
 5. 如何使用
 
-   1. 以上安装完成之后，输入地址 http://192.168.2.108 或者http://hostname  即可进入到毕升文档主页面。其中IP，hostname时安装毕升文档的服务器的IP或者主机名，或者指向该服务器的域名
+   1. 
 
-   ![image-20190225153147382](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/ibisheng.png)
+   2. 1. 以上安装完成之后，输入地址 http://192.168.2.108 或者http://hostname  即可进入到毕升文档主页面。其中IP，hostname时安装毕升文档的服务器的IP或者主机名，或者指向该服务器的域名
+
+      ![image-20190402181901296](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/image-20190402181901296.png)
+
 
 
 
