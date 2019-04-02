@@ -25,6 +25,11 @@ mkdir $1/workspace
 mkdir $1/resource
 mkdir $1/nginx
 
+cp -r service/* $1/service
+cp -r workspace/* $1/workspace
+cp -r resource/* $1/resource
+cp -r nginx/* $1/nginx
+
 
 cd $1/service
 
