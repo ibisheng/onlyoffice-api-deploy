@@ -71,7 +71,7 @@ sleep 30
 cd -
 
 
-sh init.sh 8 free $1
+
 
 
 
