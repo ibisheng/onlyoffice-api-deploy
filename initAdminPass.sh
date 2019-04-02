@@ -20,7 +20,7 @@ docker rm tools -f 1 > /dev/null 2>&1
 docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools:$tag
 
 docker run --name tools --privileged  \
-    -v $3:/workspace \
+    -v $data:/workspace \
     -e RUN_ENV=docker \
     -e type=32  \
     -e pass=$1  \
