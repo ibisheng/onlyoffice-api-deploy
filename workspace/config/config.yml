@@ -15,31 +15,10 @@ minio:
   #dnslookup: true
   #region: oss-cn-beijing
 statichost:  /s3 # minio的资源访问地址，根据自己情况修改
-dgrpah:
-  addr: dgraphServer:9080  # dgraph的主机名或IP,根据自己的情况修改,端口一般是默认值
 mongodb:
   url: mongod  # mongodb的主机名或IP,根据自己的情况修改
   db: docs
 redis:
   url: redis:6379   # minio的主机名或IP,根据自己的情况修改,端口一般是默认值
   db: 0
-elasticsearch:
-  url: search:9200
-  enable: false
 editorurl: /apps/editor
-wechat:
-  openwebsiteapp: # 微信开放平台网站应用
-    appid: wxffffffffffffffff
-    appsecret: ffffff
-  openiosapp: # 微信开放平台ios应用
-    appid: wxffffffffffffffff
-    appsecret: ffffff
-  openandroidapp: # 微信开放平台android应用
-    appid: wxffffffffffffffff
-    appsecret: ffffff
-  mpofficialaccount:  # 微信公众平台公众号
-    appid: wxffffffffffffffff
-    appsecret: ffffff
-  mpapplet: # 微信公众平台小程序
-    appid: wxffffffffffffffff
-    appsecret: ffffff

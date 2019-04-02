@@ -15,13 +15,13 @@ export tag=$tag
 
 cd $data/service
 
-docker-compose restart dgraphZero dgraphServer dgraphRatel mongod redis rabbit minio search
+docker-compose restart  mongod redis rabbit minio
 
 
 sleep 20
 
 cd $data/workspace
-docker-compose restart drive_full editor_app editor convert
+docker-compose restart editor_app editor convert
 
 sleep 10
 

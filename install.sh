@@ -11,7 +11,7 @@ fi
 echo "copy resource data"
 
 rm -rf $1/*
-docker rm nginx minio dgraphServer dgraphZero redis dgraphRatel rabbit search mongod  drive_full editor_app convert editor -f  1 > /dev/null 2>&1
+docker rm nginx minio redis rabbit mongod  editor_app convert editor -f  1 > /dev/null 2>&1
 docker network create bisheng 1 > /dev/null 2>&1
 
 export basedir=$1
@@ -30,13 +30,10 @@ cp -r nginx/* $1/nginx
 
 cd $1/service
 
-sysctl -w vm.max_map_count=262144
-mkdir -p dgraph
 mkdir -p mongod/{db,log}
 touch  mongod/log/mongod.log
 mkdir -p rabbitmq/{data}
 mkdir -p minio/{config,data}
-mkdir -p elasticsearch/{data,logs}
 mkdir -p nginx/{temp,keys}
 touch  nginx/temp/error.log
 touch  nginx/temp/access.log
