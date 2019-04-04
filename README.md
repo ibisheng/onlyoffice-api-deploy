@@ -1,6 +1,6 @@
 
 
-# ![logo](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/favicon.ico)毕升Office云平台安装步骤
+# ![logo](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/favicon.ico)毕升Office api 集成版安装步骤
 
 [毕升Office](https://ibisheng.cn)| onlyoffice中文 |onlyoffice部署
 
@@ -36,7 +36,7 @@
 
 2. 安装docker以及docker-compose
 
-   这一步是准备毕升Office运行的系统条件，并不是安装毕升Office。**
+   **这一步是准备毕升Office运行的系统条件，并不是安装毕升Office。**
 
    毕升Office云平台所有的服务均是基于docker-compose安装的，在进行下一步安装之前，**请确保你的服务器上已经安装了docker和docker-compose。**你可以使用我们准备的脚本安装,也可以自行参考资料进行安装。
 
@@ -66,7 +66,7 @@
 
    ![image-20190225144902164](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/docker-version.png)
 
-3. 一键安装毕升Office云平台
+3. 一键安装毕升Office API 版本
 
    由于一些环境下脚本创建网络会失败，建议在一键安装前建议手动创建docker 网络 bisheng。
 
@@ -106,11 +106,9 @@
 
 5. 如何使用
 
-   1. 
+   以上安装完成之后，输入地址 http://192.168.2.108 或者http://hostname  即可进入到毕升Office主页面。其中IP，hostname时安装毕升Office的服务器的IP或者主机名，或者指向该服务器的域名
 
-   2. 1. 以上安装完成之后，输入地址 http://192.168.2.108 或者http://hostname  即可进入到毕升Office主页面。其中IP，hostname时安装毕升Office的服务器的IP或者主机名，或者指向该服务器的域名
-
-      ![image-20190402181901296](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/image-20190402181901296.png)
+   ![image-20190402181901296](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/image-20190402181901296.png)
 
 
 
