@@ -60,7 +60,7 @@ sleep 60
 
 
 bash init.sh 3 free $1
-
+bash fontsService.sh
 
 bash initAdminPass.sh bisheng
 

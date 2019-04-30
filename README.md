@@ -2,9 +2,9 @@
 
 # ![logo](https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/favicon.ico)毕升Office api 集成版安装步骤
 
-[毕升Office](https://ibisheng.cn)| onlyoffice中文 |onlyoffice部署
+[毕升Office](https://bishengoffice.com)| onlyoffice中文 |onlyoffice部署
 
-毕升office api 集成版本能够处理word,ppt,excel格式文件的印预览以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升Office产品手册**](https://ibisheng.cn)。下面毕升Office的详细部署说明，如果你喜欢我们欢迎加入毕升Office交流群。
+毕升office api 集成版本能够处理word,ppt,excel格式文件的印预览以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升Office产品手册**](https://bishengoffice.com)。下面毕升Office的详细部署说明，如果你喜欢我们欢迎加入毕升Office交流群。
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9139c206ed47bb0fdf7e1f5468c447f0e9193354204659b1591477c0f70472da"><img border="0" src="https://public-bisheng.oss-cn-zhangjiakou.aliyuncs.com/resource/%E6%AF%95%E5%8D%87%E6%96%87%E6%A1%A3%E4%BA%A4%E6%B5%81%E7%BE%A4%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="毕升Office交流群" title="毕升Office交流群"></a>
 
@@ -34,7 +34,7 @@
 
 ## 用户协议
 
-在开始安装使用前请阅读毕升Office免费使用用户协议：[协议链接](https://ibisheng.cn/apps/blog/posts/agreement.html)https://ibisheng.cn/apps/blog/posts/agreement.html)
+在开始安装使用前请阅读毕升Office免费使用用户协议：[协议链接](https://bishengoffice.com/apps/blog/posts/agreement.html)https://bishengoffice.com/apps/blog/posts/agreement.html)
 
 ## 系统要求
 
@@ -137,7 +137,7 @@
 
 ## 配置
 
-完成前面5步操作之后，需要申请免费激活系统即可进行正常使用。参考链接：[免费激活](https://ibisheng.cn/apps/blog/posts/license.html)
+完成前面5步操作之后，需要申请免费激活系统即可进行正常使用。参考链接：[免费激活](https://bishengoffice.com/apps/blog/posts/license.html)
 
 毕升Office安装默认是自带ngix配置的，其中nginx的配置文件在安装目录下。如果安装安装目录是 /bisheng_data 具体路径则是： /bisheng_data/service/nginx/config/conf.d/bisheng.conf 。
 
@@ -147,11 +147,11 @@
 
 上面的步骤完成之后，你就可以免费使用毕升Office包含drive功能以及在线文件服务功能。另外如果你的文件是存储在邮件附件，ERP，以及其他的各种在线系统，你也可以使用已经部署完成的毕升Office云平台的在线文件服务来来实现Office在线预览和编辑。你所需要做的是实现相关API就可以免费使用毕升在线文件服务。
 
-API请参考 [毕升Office文件在线服务集成API](https://ibisheng.cn/apps/blog/posts/onlyoffice-api.html) https://ibisheng.cn/apps/blog/posts/onlyoffice-api.html
+API请参考 [毕升Office文件在线服务集成API](https://bishengoffice.com/apps/blog/posts/onlyoffice-api.html) https://bishengoffice.com/apps/blog/posts/onlyoffice-api.html
 
 集成版 API demo：<https://gitee.com/ibisheng/onlyoffice-api>
 
 ## 相关问题
 
-安装使用过程中如果有疑问可参考[毕升Office使用指南](https://ibisheng.cn/apps/blog/posts/guide.html)
+安装使用过程中如果有疑问可参考[毕升Office使用指南](https://bishengoffice.com/apps/blog/posts/guide.html)
 
