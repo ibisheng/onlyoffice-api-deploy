@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+
+if [  -n "$1" ] ;then
+    echo "你指定了字体目录，请确保该目录下有字体文件，同时请确保你对这些字体拥有版权"
+    if [ ! -d userFonts  ];then
+        mkdir userFonts
+    fi
+    cp $1/* userFonts
+fi
+
 var=$(cat .config)
 arr=()
 for element in $var
@@ -11,14 +20,9 @@ tag=${arr[1]}
 
 rm -rf $data/workspace/fonts/*
 
-if [ -d userFonts  ];then
-    if [ "`ls -A userFonts`" = "" ]; then
-        echo "userFonts is indeed empty"
-    else
-        echo "userFonts is not empty"
-        cp -r userFonts/* $data/workspace/fonts
-    fi
-fi
+cp -r workspace/fonts/* $data/workspace/fonts
+cp -r userFonts/* $data/workspace/fonts
+
 
 bash init.sh 64 $tag $data
 
