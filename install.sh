@@ -9,6 +9,7 @@ if [ ! -x "$1" ] ;then
 fi
 
 echo "copy resource data"
+basepath=$(cd `dirname $0`; pwd)
 
 rm -rf $1/*
 docker rm nginx minio redis rabbit mongod  editor_app convert editor -f  1 > /dev/null 2>&1
@@ -46,9 +47,8 @@ touch  nginx/temp/access.log
 
 
 
-docker-compose up -d
+#docker-compose up -d
 
-cd -
 
 
 
@@ -56,33 +56,25 @@ cd -
 
 #sed -e 's/HOST/'$2'/g' workspace/config/config.sample.yml > $1/workspace/config/config.yml
 
-sleep 60
 
 
-bash init.sh 3 free $1
-bash fontsService.sh
 
-bash initAdminPass.sh bisheng
+
+
 
 cd $1/workspace
 mkdir temp
 mkdir logs
 
-docker-compose up -d
 
-sleep 30
+cd $basepath
+bash upNodes.sh
 
-cd -
+bash init.sh 3 free $1
+bash fontsService.sh
+bash initAdminPass.sh bisheng
 
-
-
-
-
-
-cd $1/nginx
-docker-compose up -d
-
-cd -
+bash restart.sh
 bash clearImages.sh
 
 echo "你开始使用毕升Office即表示你同意链接 https://ibisheng.cn/apps/blog/posts/agreement.html 中的内容"

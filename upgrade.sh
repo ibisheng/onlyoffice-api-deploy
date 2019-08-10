@@ -14,30 +14,9 @@ export basedir=$data
 export tag=$tag
 
 bash pullImage.sh $tag
-
-cd $data/service
-echo "reinstall service"
-docker-compose up -d
-cd -
-sleep 30
-
 bash initTools.sh 2
-
-cd $data/workspace
-echo "reinstall apps"
-docker-compose up -d
-
-cd -
-
-
-cd $data/nginx
-echo "reinstall nginx"
-docker-compose up -d
-
-cd -
-
 bash fontsService.sh
-bash restart.sh
+bash upNodes.sh
 bash clearImages.sh
 
 
