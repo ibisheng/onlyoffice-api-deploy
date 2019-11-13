@@ -7,4 +7,12 @@ echo "remove service"
 docker rm minio redis rabbit mongod -f  1 > /dev/null 2>&1
 docker network create bisheng 1 > /dev/null 2>&1
 
+
+echo "copy nginx config"
+mv $data/service/nginx/config/conf.d/bisheng.conf $data/service/nginx/config/conf.d/bisheng.conf.bak
+cp service/nginx/config/conf.d/bisheng.conf  $data/service/nginx/config/conf.d -r
+
+rm .config
+echo "$data latest" > .config
+
 bash upgrade.sh
