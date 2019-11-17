@@ -16,7 +16,7 @@ docker rm nginx minio redis rabbit mongod  editor_app convert editor -f  1 > /de
 docker network create bisheng 1 > /dev/null 2>&1
 
 export basedir=$1
-export tag=free
+export tag=latest
 sh pullImage.sh $tag
 
 echo "$1 latest" > .config
@@ -70,7 +70,7 @@ mkdir logs
 cd $basepath
 bash upNodes.sh
 
-bash init.sh 3 free $1
+bash init.sh 3 latest $1
 bash fontsService.sh
 bash initAdminPass.sh bisheng
 
