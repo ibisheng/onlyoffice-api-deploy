@@ -16,7 +16,7 @@ export tag=$tag
 bash pullImage.sh $tag
 bash upNodes.sh
 bash clearImages.sh
-sleep 30
+sleep 20
 bash fontsService.sh
 
 echo "你开始使用毕升Office即表示你同意链接 https://bishengoffice.com/apps/blog/posts/agreement.html 中的内容"

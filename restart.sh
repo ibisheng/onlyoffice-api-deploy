@@ -18,12 +18,12 @@ cd $data/service
 docker-compose restart  mongod redis rabbit minio
 
 
-sleep 20
+sleep 40
 
 cd $data/workspace
 docker-compose restart editor_app editor convert
 
-sleep 10
+sleep 20
 
 cd $data/nginx
 
