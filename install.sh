@@ -71,11 +71,11 @@ cd $basepath
 bash upNodes.sh
 
 bash init.sh 3 latest $1
-bash fontsService.sh
 bash initAdminPass.sh bisheng
 
 bash restart.sh
 bash clearImages.sh
-
+sleep 30
+bash fontsService.sh
 echo "你开始使用毕升Office即表示你同意链接 https://ibisheng.cn/apps/blog/posts/agreement.html 中的内容"
 echo "在你的浏览器中打开 http://IP 即可访问毕升文档，请参看安装文档激活毕升文档"

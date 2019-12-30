@@ -14,11 +14,10 @@ export basedir=$data
 export tag=$tag
 
 bash pullImage.sh $tag
-bash initTools.sh 2
-bash fontsService.sh
 bash upNodes.sh
 bash clearImages.sh
-
+sleep 30
+bash fontsService.sh
 
 echo "你开始使用毕升Office即表示你同意链接 https://bishengoffice.com/apps/blog/posts/agreement.html 中的内容"
 echo "在你的浏览器中打开 http://IP 即可访问毕升文档"
