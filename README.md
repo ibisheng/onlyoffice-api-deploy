@@ -51,15 +51,15 @@
 1. 从[github](https://github.com/ibisheng/deploy.git)上clone相关的部署脚本到服务器上
 
    ```shell
-   git clone https://github.com/ibisheng/onlyoffice-api-deploy.git
-   cd onlyoffice-api-deploy
+   git clone https://github.com/ibisheng/api-deploy.git
+   cd api-deploy
    ```
 
    或者你也可以从国内代码托管网站[码云](https://gitee.com/ibisheng) 上clone毕升Office部署脚本到服务器上
 
    ```
-   git clone https://gitee.com/ibisheng/onlyoffice-api-deploy.git
-   cd onlyoffice-api-deploy
+   git clone https://gitee.com/ibisheng/api-deploy
+   cd api-deploy
    ```
 
 2. 安装docker以及docker-compose
@@ -149,15 +149,8 @@
 
 如果你需要配置nginx 的https，则可以将https证书放在/bisheng_data/service/nginx/keys目录下，该目录在docker中的路径是/keys，**配置时路径应该填写docker的路径**
 
-## 集成毕升Office文件服务，实现Office在线预览和编辑
+## 集成毕升以及相关问题
 
-上面的步骤完成之后，你就可以免费使用毕升Office包含drive功能以及在线文件服务功能。另外如果你的文件是存储在邮件附件，ERP，以及其他的各种在线系统，你也可以使用已经部署完成的毕升Office云平台的在线文件服务来来实现Office在线预览和编辑。你所需要做的是实现相关API就可以免费使用毕升在线文件服务。
+具体参考文档导航：<https://bishengoffice.com/apps/blog/posts/guide.html>
 
-API请参考 [毕升Office文件在线服务集成API](https://bishengoffice.com/apps/blog/posts/onlyoffice-api.html) https://bishengoffice.com/apps/blog/posts/onlyoffice-api.html
-
-集成版 API demo：<https://gitee.com/ibisheng/onlyoffice-api>
-
-## 相关问题
-
-安装使用过程中如果有疑问可参考[毕升Office使用指南](https://bishengoffice.com/apps/blog/posts/guide.html)
-
+集成参考链接：<https://bishengoffice.com/apps/blog/posts/integrate.html>
