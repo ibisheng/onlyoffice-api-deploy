@@ -15,7 +15,7 @@ export tag=$tag
 
 bash pullImage.sh $tag
 bash initTools.sh 2
-bash fontsService.sh
+#bash fontsService.sh
 bash upNodes.sh
 bash clearImages.sh
 
