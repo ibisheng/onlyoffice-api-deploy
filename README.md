@@ -6,9 +6,7 @@
 
 毕升office api 集成版本能够处理word,ppt,excel格式文件的印预览以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升Office产品手册**](https://bishengoffice.com)。下面毕升Office的详细部署说明，
 
-技术及合作：18613320502
-
-销售以及商务咨询：13718023114
+销售以及商务咨询：[联系我们](https://bishengoffice.com/apps/blog/posts/aboutus.html)
 
 也可以在微信中搜索毕升Office文档小程序
 
