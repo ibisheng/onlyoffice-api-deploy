@@ -6,9 +6,7 @@
 
 毕升office api 集成版本能够处理word,ppt,excel格式文件的印预览以及**多人协同编辑**，另外还能处理pdf，视频，音频文件的预览以及实现了100多种文本文件带语法高亮的预览 。详细介绍请参考[**毕升Office产品手册**](https://bishengoffice.com)。下面毕升Office的详细部署说明，
 
-技术及合作：18613320502
-
-销售以及商务咨询：13718023114
+销售以及商务咨询：[联系我们](https://bishengoffice.com/apps/blog/posts/aboutus.html)
 
 也可以在微信中搜索毕升Office文档小程序
 
@@ -141,7 +139,7 @@
 
 ## 配置
 
-完成前面5步操作之后，需要申请免费激活系统即可进行正常使用。参考链接：[免费激活](https://bishengoffice.com/apps/blog/posts/license.html)
+完成前面5步操作之后，需要申请免费激活系统即可进行正常使用。参考链接：[免费激活](https://bishengoffice.com/apps/blog/posts/install-active.html)
 
 毕升Office安装默认是自带ngix配置的，其中nginx的配置文件在安装目录下。如果安装安装目录是 /bisheng_data 具体路径则是： /bisheng_data/service/nginx/config/conf.d/bisheng.conf 。
 
